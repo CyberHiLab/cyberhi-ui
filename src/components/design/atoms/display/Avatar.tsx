@@ -110,7 +110,7 @@ export function Avatar({
                     </FallbackBase>
                 )}
             </foreignObject>
-            {overlay}
+            {overlay}    
         </ParentBase>
     );
 }

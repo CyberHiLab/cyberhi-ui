@@ -9,7 +9,7 @@ import { Unreads } from "../../../atoms/indicators/Unreads";
 import { Swoosh } from "./Swoosh";
 import { useLink, useTrigger } from "../../../../../lib/context";
 import { Tooltip } from "../../../atoms/indicators/Tooltip";
-import { INotificationChecker } from "revolt.js/dist/util/Unreads";
+import { INotificationChecker } from "cyberhi.js/dist/util/Unreads";
 
 export const ItemContainer = styled.div<{ head?: boolean }>`
     width: 56px;

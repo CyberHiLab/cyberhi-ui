@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
 
-import type { UserStatus as Interface } from "revolt-api";
+import type { UserStatus as Interface } from "cyberhi-api";
 import type { User } from "cyberhi.js";
 
 export type Props = {

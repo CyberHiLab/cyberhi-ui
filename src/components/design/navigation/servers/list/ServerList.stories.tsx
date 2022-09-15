@@ -14,7 +14,7 @@ export default {
     component: ServerList,
     argTypes: {
         client: {
-            name: "Revolt.js Client",
+            name: "cyberhi.js Client",
             type: "symbol",
         },
         servers: {

@@ -3,7 +3,7 @@ import React from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Virtuoso } from "react-virtuoso";
 import type { Client, Server } from "cyberhi.js";
-import type { INotificationChecker } from "revolt.js/dist/util/Unreads";
+import type { INotificationChecker } from "cyberhi.js/dist/util/Unreads";
 import styled, { css } from "styled-components";
 
 import { isTouchscreenDevice } from "../../../../../lib";
