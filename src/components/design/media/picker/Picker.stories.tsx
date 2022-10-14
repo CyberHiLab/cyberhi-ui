@@ -1,9 +1,11 @@
-import React, { memo } from "react";
-import { Picker } from "./Picker";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { emojiDictionary, parseEmoji } from "../../../../lib/internal/emojis";
-import { InjectMockClient } from "../../../../lib/internal";
+import React, { memo } from "react";
 import { Server } from "revolt.js";
+
+import { InjectMockClient } from "../../../../lib/internal";
+import { emojiDictionary, parseEmoji } from "../../../../lib/internal/emojis";
+
+import { Picker } from "./Picker";
 
 export default {
     title: "Design System/Media/Picker",
@@ -32,7 +34,7 @@ export default {
                 <img
                     src={
                         emoji === "0"
-                            ? "https://autumn.yotele.chat/attachments/fTs2qDi4ix0i_BDzJ-WwX2Hgvbr5KRL47dMKyD13Je/image.png"
+                            ? "https://autumn.revolt.chat/attachments/fTs2qDi4ix0i_BDzJ-WwX2Hgvbr5KRL47dMKyD13Je/image.png"
                             : parseEmoji(
                                   emojiDictionary[
                                       emoji as keyof typeof emojiDictionary
@@ -78,6 +80,34 @@ const Template: ComponentStory<typeof Picker> = (args) => (
                                 name: "Default",
                                 emoji: "smiley",
                             },
+                            {
+                                id: "b",
+                                name: "Deez Nuts",
+                            },
+                            {
+                                id: "c",
+                                name: "C",
+                            },
+                            {
+                                id: "d",
+                                name: "D",
+                            },
+                            {
+                                id: "e",
+                                name: "E",
+                            },
+                            {
+                                id: "f",
+                                name: "F",
+                            },
+                            {
+                                id: "g",
+                                name: "G",
+                            },
+                            {
+                                id: "h",
+                                name: "H",
+                            },
                         ]}
                     />
                 </div>
@@ -86,7 +116,8 @@ const Template: ComponentStory<typeof Picker> = (args) => (
                         height: "48px",
                         background: "var(--message-box)",
                         flexShrink: 0,
-                    }}></div>
+                    }}
+                />
             </div>
         )}
     </InjectMockClient>

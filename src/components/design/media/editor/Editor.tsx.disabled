@@ -17,7 +17,7 @@ const initialValue: Descendant[] = [
         type: "paragraph",
         children: [
             {
-                text: "hello *gaming* **joigfdioghjdfghf** [I am a link](https://revolt.chat)",
+                text: "hello *gaming* **joigfdioghjdfghf** [I am a link](https://cyberhi.chat)",
             },
         ],
     },

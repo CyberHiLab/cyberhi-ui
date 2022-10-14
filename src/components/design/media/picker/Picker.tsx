@@ -1,10 +1,12 @@
-import React, { memo, useEffect, useMemo, useRef, useState } from "react";
-import { Avatar, Column, InputBox } from "../../atoms";
+import { observable } from "mobx";
+import React, { memo, useMemo, useRef, useState } from "react";
 import { GroupedVirtuoso, GroupedVirtuosoHandle } from "react-virtuoso";
 import styled from "styled-components";
-import { EmojiPreview } from "./EmojiPreview";
-import { observable } from "mobx";
+
 import useCloseHook from "../../../../lib/closeHook";
+
+import { Avatar, Column, InputBox } from "../../atoms";
+import { EmojiPreview } from "./EmojiPreview";
 
 /**
  * Category of emoji
@@ -91,6 +93,7 @@ const Controls = styled(Column)`
  */
 const Parent = styled.div`
     flex-grow: 1;
+    min-height: 0;
 
     display: flex;
     flex-direction: row;
@@ -283,7 +286,7 @@ export function Picker({
                 categoryCounts,
                 activeCategories,
             };
-        }, [query]);
+        }, [query, categories, emojis]);
 
     // Component for rendering each row of emojis
     const Row = useMemo(
@@ -292,6 +295,7 @@ export function Picker({
                 <>
                     {items[index].map((emoji) => (
                         <EmojiContainer
+                            key={emoji.id}
                             onClick={(ev) => {
                                 onSelect?.(emoji.id);
 
@@ -305,7 +309,7 @@ export function Picker({
                     ))}
                 </>
             )),
-        [items, Emoji],
+        [items, active, onClose, onSelect, Emoji],
     );
 
     // Component for rendering group icons
@@ -326,7 +330,7 @@ export function Picker({
                     )}
                 </CategoryIcon>
             )),
-        [],
+        [Emoji],
     );
 
     // Register mouse events to close
@@ -346,7 +350,7 @@ export function Picker({
                 <GroupedVirtuoso
                     ref={ref}
                     style={{
-                        flexGrow: "1",
+                        flexGrow: 1,
                         padding: "0 2px",
                         overflowX: "hidden",
                     }}
