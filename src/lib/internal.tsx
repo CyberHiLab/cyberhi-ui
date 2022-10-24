@@ -30,7 +30,7 @@ export const InjectMockClient = ({
     if (!exists)
         return (
             <h1 style={{ color: "white" }}>
-                Loading mock client from Revolt.js...
+                Loading mock client from cyberhi.js...
             </h1>
         );
 
