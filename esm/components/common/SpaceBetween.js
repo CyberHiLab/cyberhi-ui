@@ -1,0 +1,1 @@
+import styled from"styled-components";export var SpaceBetween=styled.div.withConfig({displayName:"SpaceBetween",componentId:"sc-gsgr7x-0"})(["display:flex;align-items:center;justify-content:space-between;"]);

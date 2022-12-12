@@ -1,0 +1,1 @@
+import styled from"styled-components";export var H3=styled.h3.withConfig({displayName:"H3",componentId:"sc-1fd0dqp-0"})(["font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--secondary-foreground);&:first-child{margin-top:0;}"]);

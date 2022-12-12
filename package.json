@@ -1,6 +1,6 @@
 {
     "name": "cyberhi-ui",
-    "version": "1.0.78",
+    "version": "1.0.83",
     "description": "cyberhi UI component library",
     "type": "commonjs",
     "main": "lib/index.js",
